@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.comcast.ntd</groupId>
+	<artifactId>Ping</artifactId>
+	<packaging>war</packaging>
+	<name>Ping</name>
+	<version>1.0</version>
+	<repositories>
+		<repository>
+			<id>Comcast</id>
+			<url>http://pacdcd-60dnyb1.cable.comcast.com/maven</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>ComcastPlugin</id>
+			<url>http://pacdcd-60dnyb1.cable.comcast.com/maven</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>localhost</id>
+			<url>file://c:/Documents and Settings/stso000c/.m2/repository</url>
+		</pluginRepository>
+	</pluginRepositories>
+	<scm>
+		<connection>scm:svn:http://pacdcapp10.cable.comcast.com:8080/svn/repos/ESP</connection>
+		<developerConnection>scm:svn:http://pacdcapp10.cable.comcast.com:8080/svn/repos/ESP</developerConnection>
+		<url>http://pacdcapp10.cable.comcast.com:8080/svn/repos/ESP</url>
+	</scm>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.comcast.maven.plugins</groupId>
+				<artifactId>maven-buildstamp-plugin</artifactId>
+				<version>1.0</version>
+				<configuration>
+					<stampfile>src/main/resources/version.properties</stampfile>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<distributionManagement>
+		<repository>
+			<id>ntdmavenrepo</id>
+			<name>Central NTD Maven Repository</name>
+			<url>file://c:/apps/ntdmavenrepo</url>
+		</repository>
+	</distributionManagement>
+</project>
